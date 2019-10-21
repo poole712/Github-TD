@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 2459156523857502523}
   - component: {fileID: 6568505828922851710}
   - component: {fileID: -9182817608107493640}
-  - component: {fileID: 5259151154505381723}
+  - component: {fileID: 4528766511863685571}
+  - component: {fileID: -3518430819014576058}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -94,7 +95,23 @@ MonoBehaviour:
   speed: 70
   impactEffect: {fileID: 2416011941302703000, guid: 9f7b8d48cc4b8464699d96ab027ecd70,
     type: 3}
---- !u!135 &5259151154505381723
+--- !u!54 &4528766511863685571
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1189508452703579574}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!135 &-3518430819014576058
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

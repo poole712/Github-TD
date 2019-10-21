@@ -18,7 +18,7 @@ public class Currency : MonoBehaviour
         
     }
 
-    IEnumerable currencyTick()
+    IEnumerator currencyTick()
     {
         currency++;
         yield return new WaitForSeconds(1);

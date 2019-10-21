@@ -8,7 +8,7 @@ public class NormalBlobEnemy : MonoBehaviour
     public Transform homeBase;
 
     //public static float Health = 5f;
-    public static int hp;
+    public int hp;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +16,7 @@ public class NormalBlobEnemy : MonoBehaviour
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = homeBase.position;
         hp = 5;
+        
     }
 
     // Update is called once per frame
@@ -29,6 +30,11 @@ public class NormalBlobEnemy : MonoBehaviour
         }
 
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        hp--;
     }
 
     
