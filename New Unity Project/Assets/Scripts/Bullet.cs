@@ -4,15 +4,22 @@ public class Bullet : MonoBehaviour
 {
     private Transform target;
 
+    
     public float speed = 70f;
     public GameObject impactEffect;
+    NormalBlobEnemy NBE;
+    
 
     public void Seek(Transform _target)
     {
         target = _target;
     }
 
-    // Update is called once per frame
+    private void Start()
+    {
+        
+    }
+    
     void Update()
     {
         if(target == null)
@@ -37,7 +44,7 @@ public class Bullet : MonoBehaviour
     {
         GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
-
+        
         Destroy(gameObject);
     }
 }

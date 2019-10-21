@@ -7,19 +7,29 @@ public class NormalBlobEnemy : MonoBehaviour
 {
     public Transform homeBase;
 
-    public float Health;
+    //public static float Health = 5f;
+    public static int hp;
 
     // Start is called before the first frame update
     void Start()
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = homeBase.position;
-
+        hp = 5;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (hp == 0)
+        {
+            Currency.currency++;
+            Debug.Log(Currency.currency);
+            Destroy(this.gameObject);
+        }
+
+
     }
+
+    
 }
