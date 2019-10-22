@@ -69,7 +69,7 @@ public class Turret : MonoBehaviour
             fireCountdown = 1f / fireRate;
         }
 
-        fireCountdown -= Time.deltaTime;
+        fireCountdown -= Time.deltaTime * Time.timeScale;
 
     }
     void Shoot()
