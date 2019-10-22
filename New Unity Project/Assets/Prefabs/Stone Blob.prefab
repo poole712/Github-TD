@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1080308073452622620}
   - component: {fileID: 1080308073452622621}
-  - component: {fileID: 1080308073452622622}
   - component: {fileID: 3113533205190172293}
+  - component: {fileID: 1932656995530750613}
   m_Layer: 0
   m_Name: Stone Blob
   m_TagString: Enemy
@@ -56,25 +56,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1080308073452622622
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1080308073452622623}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5f412c5a2d81104d83193ecd84583f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normalHp: 15
-  stoneHp: 10
-  homeBase: {fileID: 3034661165823471078, guid: 520a6159074a3d34a9289127c598bba0,
-    type: 3}
-  normalBlobSpeed: 0
-  stoneBlobSpeed: 0
-  Health: 0
 --- !u!135 &3113533205190172293
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -88,6 +69,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.56067085
   m_Center: {x: -0.008961565, y: 0.7221742, z: 0}
+--- !u!114 &1932656995530750613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080308073452622623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7139ea5929e481949807c8647762da59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  reward: 10
+  speed: 0
+  homeBase: {fileID: 3034661165823471078, guid: 520a6159074a3d34a9289127c598bba0,
+    type: 3}
 --- !u!95 &1080308074287105888
 Animator:
   serializedVersion: 3
