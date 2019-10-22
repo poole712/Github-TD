@@ -105,3 +105,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.060074754, g: 0.3133662, b: 0.509434, a: 0.4745098}
+  notEnoughMoney: {r: 0.745283, g: 0.13710396, b: 0.13710396, a: 0.4745098}

@@ -68,7 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5f412c5a2d81104d83193ecd84583f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  normalHp: 15
+  stoneHp: 10
   homeBase: {fileID: 3034661165823471078, guid: 520a6159074a3d34a9289127c598bba0,
     type: 3}
   normalBlobSpeed: 0

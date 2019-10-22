@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class NormalBlobEnemy : MonoBehaviour
 {
-    public int hp;
+    public int normalHp;
+    public int stoneHp;
 
     public Transform homeBase;
 
@@ -37,9 +38,16 @@ public class NormalBlobEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp == 0)
+        if (normalHp == 0 )
         {
             Currency.currency = Currency.currency + 5;
+            Debug.Log(Currency.currency);
+            Destroy(this.gameObject);
+        }
+
+        if (stoneHp == 0)
+        {
+            Currency.currency = Currency.currency + 10;
             Debug.Log(Currency.currency);
             Destroy(this.gameObject);
         }
@@ -47,6 +55,7 @@ public class NormalBlobEnemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        hp--;
+        normalHp--;
+        stoneHp--;
     }
 }

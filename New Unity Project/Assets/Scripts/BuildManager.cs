@@ -16,6 +16,8 @@ public class BuildManager : MonoBehaviour
 
     }
 
+    public bool hasMoney { get { return Currency.currency >= 25; } }
+
     public GameObject standardTurretPrefab;
 
     void Start()

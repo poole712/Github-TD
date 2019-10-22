@@ -5,6 +5,7 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public Color hoverColor;
+    public Color notEnoughMoney;
 
     private GameObject turret;
 
@@ -34,7 +35,17 @@ public class Node : MonoBehaviour
 
     void OnMouseEnter()
     {
-        rend.material.color = hoverColor;
+        if (Currency.currency >= 25)
+        {
+            rend.material.color = hoverColor;
+        }
+
+        else
+        {
+            rend.material.color = notEnoughMoney;
+        }
+
+        
     }
 
     void OnMouseExit()
