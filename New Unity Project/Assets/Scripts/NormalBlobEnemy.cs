@@ -39,7 +39,7 @@ public class NormalBlobEnemy : MonoBehaviour
     {
         if (hp == 0)
         {
-            Currency.currency++;
+            Currency.currency = Currency.currency + 5;
             Debug.Log(Currency.currency);
             Destroy(this.gameObject);
         }
