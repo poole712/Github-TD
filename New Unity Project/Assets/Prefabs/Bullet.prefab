@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2459156523857502523}
   - component: {fileID: 6568505828922851710}
   - component: {fileID: -9182817608107493640}
-  - component: {fileID: 4528766511863685571}
-  - component: {fileID: -3518430819014576058}
+  - component: {fileID: 8417985127780019221}
+  - component: {fileID: -6772120234221058896}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -95,7 +95,7 @@ MonoBehaviour:
   speed: 70
   impactEffect: {fileID: 2416011941302703000, guid: 9f7b8d48cc4b8464699d96ab027ecd70,
     type: 3}
---- !u!54 &4528766511863685571
+--- !u!54 &8417985127780019221
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,11 +107,11 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!135 &-3518430819014576058
+--- !u!135 &-6772120234221058896
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

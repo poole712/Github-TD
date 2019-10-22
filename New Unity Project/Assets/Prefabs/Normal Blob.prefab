@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 699977943637510463}
   - component: {fileID: 699977943637510457}
   - component: {fileID: 699977943637510456}
-  - component: {fileID: -878768589831576392}
+  - component: {fileID: 540790856}
   m_Layer: 0
   m_Name: Normal Blob
   m_TagString: Enemy
@@ -46,9 +46,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5f412c5a2d81104d83193ecd84583f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 5
   homeBase: {fileID: 3034661165823471078, guid: 520a6159074a3d34a9289127c598bba0,
     type: 3}
-  hp: 0
+  normalBlobSpeed: 0
+  stoneBlobSpeed: 0
+  Health: 0
 --- !u!195 &699977943637510456
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -71,7 +74,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!135 &-878768589831576392
+--- !u!135 &540790856
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,8 +85,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.835922
-  m_Center: {x: 0, y: 0.335922, z: 0}
+  m_Radius: 0.5702286
+  m_Center: {x: 0, y: 0.5174494, z: 0}
 --- !u!95 &699977943614080685
 Animator:
   serializedVersion: 3

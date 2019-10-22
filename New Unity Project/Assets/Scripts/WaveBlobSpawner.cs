@@ -11,8 +11,10 @@ public class WaveBlobSpawner : MonoBehaviour {
     public class Wave
     {
         public string name;
-        public Transform enemy;
-        public int count;
+        public Transform NormalBlobEnemy;
+        public Transform StoneBlobEnemy;
+        public int NormalBlobCount;
+        public int StoneBlobCount;
         public float rate;
     }
 
@@ -99,9 +101,17 @@ public class WaveBlobSpawner : MonoBehaviour {
         state = SpawnState.SPAWNING;
 
 
-        for (int i = 0; i < _wave.count; i++)
+        for (int i = 0; i < _wave.NormalBlobCount; i++)
         {
-            SpawnEnemy(_wave.enemy);
+            SpawnEnemy(_wave.NormalBlobEnemy);
+
+            yield return new WaitForSeconds(1f / _wave.rate);
+        }
+
+        for (int i = 0; i < _wave.StoneBlobCount; i++)
+        {
+            SpawnEnemy(_wave.StoneBlobEnemy);
+
             yield return new WaitForSeconds(1f / _wave.rate);
         }
 
