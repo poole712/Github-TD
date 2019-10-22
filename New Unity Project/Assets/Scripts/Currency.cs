@@ -7,6 +7,8 @@ public class Currency : MonoBehaviour
 {
     public static int currency;
     public Text curr;
+    public GameObject turret;
+    public Vector3 turretPos;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +29,11 @@ public class Currency : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         StartCoroutine("currencyTick");
+    }
+
+    void buyTurret()
+    {
+        currency = currency - 5;
+        Instantiate(turret, turretPos, Quaternion.identity);
     }
 }
