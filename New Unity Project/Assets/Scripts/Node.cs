@@ -41,11 +41,11 @@ public class Node : MonoBehaviour
             Currency.currency = Currency.currency - 25;
         }
 
-        if (Currency.currency >= 100 && Shop.turretValue == 2)
+        if (Currency.currency >= 75 && Shop.turretValue == 2)
         {
             GameObject turretToBuild = buildManager.GetTurretToBuild();
             turret = (GameObject)Instantiate(turretToBuild, transform.position, Quaternion.Euler(new Vector3(0, -90, 0)));
-            Currency.currency = Currency.currency - 100;
+            Currency.currency = Currency.currency - 75;
         }
     }
 
