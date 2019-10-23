@@ -16,13 +16,13 @@ public class TimeSpeed : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl))
         {
             Time.timeScale = 2;
-            Debug.Log(Time.timeScale);
+            
         }
 
         if (Input.GetKeyUp(KeyCode.LeftControl))
         {
             Time.timeScale = 1;
-            Debug.Log(Time.timeScale);
+            
         }
     }
 }

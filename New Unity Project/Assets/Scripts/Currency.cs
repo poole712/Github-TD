@@ -25,8 +25,8 @@ public class Currency : MonoBehaviour
 
     IEnumerator currencyTick()
     {
-        currency++;
-        yield return new WaitForSeconds(1);
+        currency = currency + 1;
+        yield return new WaitForSeconds(0.5f);
 
         StartCoroutine("currencyTick");
     }

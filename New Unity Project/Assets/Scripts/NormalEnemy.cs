@@ -4,10 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class NormalEnemy : Enemy
-{
-
-
-    // Start is called before the first frame update
+{    
     void Start()
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -17,11 +14,9 @@ public class NormalEnemy : Enemy
 
         agent.speed += speed;
     }
-
-    // Update is called once per frame
+    
     void Update()
-    {
-     
+    {     
             if (health == 0)
             {
                 Currency.currency = Currency.currency + reward;
