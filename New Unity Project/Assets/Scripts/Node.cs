@@ -34,11 +34,18 @@ public class Node : MonoBehaviour
             Debug.Log("Can't build there! - TODO: Display on Screen.");
             return;
         }
-        if (Currency.currency >= 25)
+        if (Currency.currency >= 25 && Shop.turretValue == 1)
         {
             GameObject turretToBuild = buildManager.GetTurretToBuild();
             turret = (GameObject)Instantiate(turretToBuild, transform.position, Quaternion.Euler(new Vector3(0, -90, 0)));
             Currency.currency = Currency.currency - 25;
+        }
+
+        if (Currency.currency >= 100 && Shop.turretValue == 2)
+        {
+            GameObject turretToBuild = buildManager.GetTurretToBuild();
+            turret = (GameObject)Instantiate(turretToBuild, transform.position, Quaternion.Euler(new Vector3(0, -90, 0)));
+            Currency.currency = Currency.currency - 100;
         }
     }
 

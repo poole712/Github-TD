@@ -227,8 +227,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 20
-  fireRate: 1
+  range: 50
+  fireRate: 3
   partToRotate: {fileID: 5673209826316933288}
   turnSpeed: 10
   bulletPrefab: {fileID: 1189508452703579574, guid: e6d3d638a835872408d378c66a038814,
