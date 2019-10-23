@@ -16,14 +16,15 @@ public class BuildManager : MonoBehaviour
 
     }
 
-    public bool hasMoney { get { return Currency.currency >= 25; } }
+    //public bool hasMoney { get { return Currency.currency >= 25; } }
 
     public GameObject standardTurretPrefab;
+    public GameObject secondTurretPrefab;
 
-    void Start()
+    /*void Start()
     {
         turretToBuild = standardTurretPrefab;
-    }
+    }*/
 
     private GameObject turretToBuild;
 
@@ -32,6 +33,10 @@ public class BuildManager : MonoBehaviour
         return turretToBuild;
     }
 
+    public void SetTurretToBuild(GameObject turret)
+    {
+        turretToBuild = turret;
+    }
 
     // Update is called once per frame
     void Update()
