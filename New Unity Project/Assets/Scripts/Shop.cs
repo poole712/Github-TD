@@ -37,17 +37,13 @@ public class Shop : MonoBehaviour
         if (turretValue == 1)
         {
             turret1.SetActive(true);
+            turret2.SetActive(false);
         }
 
         if (turretValue == 2)
         {
             turret2.SetActive(true);
-        }
-
-        else
-        {
             turret1.SetActive(false);
-            turret2.SetActive(false);
         }
     }
 }

@@ -2,9 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.UI;
 
 public class StoneEnemy : Enemy
 {
+    public Image healthbar;
+    float startHealth = 20f;
+
     void Start()
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -17,11 +21,13 @@ public class StoneEnemy : Enemy
 
     void Update()
     {
-            if (health == 0)
+            if (health == 0f)
             {
                 Currency.currency = Currency.currency + reward;
                 Debug.Log(Currency.currency);
                 Destroy(this.gameObject);
             }
+
+        healthbar.fillAmount = health / startHealth;
     }
 }

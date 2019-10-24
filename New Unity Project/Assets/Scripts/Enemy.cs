@@ -5,7 +5,7 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
-    public int health;
+    public float health;
     public int reward;
 
     public float speed;
