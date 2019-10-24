@@ -12,6 +12,10 @@ public class Turret : MonoBehaviour
     public float fireRate = 1f;
     private float fireCountdown = 0f;
 
+    [Header("Use Laser")]
+    public bool useLaser = false;
+    public LineRenderer lineRend;
+
     [Header("Unity Setup Fields")]
 
     public Transform partToRotate;
@@ -56,29 +60,60 @@ public class Turret : MonoBehaviour
     void Update()
     {
         if (target == null)
+        {
+            if(useLaser == true)
+            {
+                if (lineRend.enabled)
+                    lineRend.enabled = false;
+            }
             return;
+        }
 
+        LockOnTarget();
+
+        if (useLaser)
+        {
+            Laser();
+        }
+        else
+        {
+            if (fireCountdown <= 0f)
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
+
+            if (Time.timeScale == 2)
+            {
+                fireCountdown -= Time.deltaTime * (Time.timeScale / 1.5f);
+            }
+            else
+            {
+                fireCountdown -= Time.deltaTime * Time.timeScale;
+            }
+        }
+
+        
+
+    }
+
+    void Laser()
+    {
+        if (!lineRend.enabled)
+            lineRend.enabled = true;
+
+        lineRend.SetPosition(0, firePoint.position);
+        lineRend.SetPosition(2, target.position);
+    }
+
+    void LockOnTarget()
+    {
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(rotation.x, rotation.y, 0f);
-
-        if (fireCountdown <= 0f)
-        {
-            Shoot();
-            fireCountdown = 1f / fireRate;
-        }
-
-        if (Time.timeScale == 2)
-        {
-            fireCountdown -= Time.deltaTime * (Time.timeScale / 1.5f);
-        }
-        else
-        {
-            fireCountdown -= Time.deltaTime * Time.timeScale;
-        }
-
     }
+
     void Shoot()
     {
         GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
