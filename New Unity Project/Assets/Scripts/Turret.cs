@@ -103,7 +103,7 @@ public class Turret : MonoBehaviour
             lineRend.enabled = true;
 
         lineRend.SetPosition(0, firePoint.position);
-        lineRend.SetPosition(2, target.position);
+        lineRend.SetPosition(1, target.position);
     }
 
     void LockOnTarget()
