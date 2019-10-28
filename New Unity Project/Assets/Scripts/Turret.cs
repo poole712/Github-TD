@@ -24,10 +24,13 @@ public class Turret : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+    public Collider coll;
+
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        coll = GetComponent<Collider>();
     }
 
     void UpdateTarget()
@@ -104,6 +107,9 @@ public class Turret : MonoBehaviour
 
         lineRend.SetPosition(0, firePoint.position);
         lineRend.SetPosition(1, target.position);
+
+        Shoot();
+
     }
 
     void LockOnTarget()

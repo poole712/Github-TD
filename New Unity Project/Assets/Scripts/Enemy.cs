@@ -17,9 +17,8 @@ public class Enemy : MonoBehaviour
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = homeBase.position;
-
     }
-
+    
     private void OnTriggerEnter(Collider other)
     {
         health--;

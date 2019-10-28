@@ -9,6 +9,8 @@ public class NormalEnemy : Enemy
     public Image healthbar;
     float startHealth = 5f;
 
+    
+
     void Start()
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -17,6 +19,7 @@ public class NormalEnemy : Enemy
         speed = Random.Range(2f, 6f);
 
         agent.speed += speed;
+
         
     }
     
@@ -31,4 +34,5 @@ public class NormalEnemy : Enemy
 
         healthbar.fillAmount = health / startHealth;
     }
+
 }

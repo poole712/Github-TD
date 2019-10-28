@@ -18,7 +18,7 @@ public class StoneEnemy : Enemy
 
         agent.speed += speed;
     }
-
+    
     void Update()
     {
             if (health == 0f)
