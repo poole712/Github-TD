@@ -736,7 +736,7 @@ MonoBehaviour:
   lineRend: {fileID: 1136329195305062580}
   partToRotate: {fileID: 783068866}
   turnSpeed: 10
-  bulletPrefab: {fileID: 1189508452703579574, guid: e6d3d638a835872408d378c66a038814,
+  bulletPrefab: {fileID: 1189508452703579574, guid: 5ccea7ee05884cd4da3726aa838b915a,
     type: 3}
   firePoint: {fileID: 4651426984571230752}
   coll: {fileID: 0}
