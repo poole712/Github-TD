@@ -9731,8 +9731,6 @@ MonoBehaviour:
   speed: 5
   homeBase: {fileID: 3034661165823471078, guid: 520a6159074a3d34a9289127c598bba0,
     type: 3}
-  laserTurret: {fileID: 5753237452225830488, guid: 8dccf299bc508bf49ad4528f77cda9de,
-    type: 3}
 --- !u!1001 &1812300718
 PrefabInstance:
   m_ObjectHideFlags: 0

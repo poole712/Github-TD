@@ -21,7 +21,7 @@ public class StoneEnemy : Enemy
     
     void Update()
     {
-            if (health == 0f)
+            if (health <= 0f)
             {
                 Currency.currency = Currency.currency + reward;
                 Debug.Log(Currency.currency);

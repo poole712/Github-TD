@@ -45,5 +45,10 @@ public class Shop : MonoBehaviour
             turret2.SetActive(true);
             turret1.SetActive(false);
         }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Currency.currency = Currency.currency + 1000;
+        }
     }
 }

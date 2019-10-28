@@ -10,7 +10,7 @@ public class Turret : MonoBehaviour
 
     public float range = 15f;
     public float fireRate = 1f;
-    private float fireCountdown = 0f;
+    public float fireCountdown = 0f;
 
     [Header("Use Laser")]
     public bool useLaser = false;
@@ -74,6 +74,7 @@ public class Turret : MonoBehaviour
         if (useLaser)
         {
             Laser();
+            Shoot2();
         }
         else
         {
@@ -92,10 +93,8 @@ public class Turret : MonoBehaviour
                 fireCountdown -= Time.deltaTime * Time.timeScale;
             }
         }
-
-        
-
     }
+
 
     void Laser()
     {
@@ -104,8 +103,6 @@ public class Turret : MonoBehaviour
 
         lineRend.SetPosition(0, firePoint.position);
         lineRend.SetPosition(1, target.position);
-
-        Shoot();
 
     }
 
@@ -119,11 +116,25 @@ public class Turret : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bullet = bulletGO.GetComponent<Bullet>();
+        if (useLaser == false)
+        {
+            GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Bullet bullet = bulletGO.GetComponent<Bullet>();
 
-        if (bullet != null)
-            bullet.Seek(target);
+            if (bullet != null)
+                bullet.Seek(target);
+        }
+    }
+
+    void Shoot2()
+    {
+        
+            GameObject bulletGO = (GameObject)Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Bullet bullet = bulletGO.GetComponent<Bullet>();
+
+            if (bullet != null)
+                bullet.Seek(target);
+        
     }
 
     void OnDrawGizmosSelected()

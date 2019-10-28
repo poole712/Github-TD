@@ -730,8 +730,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  range: 50
-  fireRate: 0.1
+  range: 30
+  fireRate: 0
+  fireCountdown: 0.1
   useLaser: 1
   lineRend: {fileID: 1136329195305062580}
   partToRotate: {fileID: 783068866}
@@ -739,7 +740,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1189508452703579574, guid: 5ccea7ee05884cd4da3726aa838b915a,
     type: 3}
   firePoint: {fileID: 4651426984571230752}
-  coll: {fileID: 0}
 --- !u!120 &1136329195305062580
 LineRenderer:
   m_ObjectHideFlags: 0

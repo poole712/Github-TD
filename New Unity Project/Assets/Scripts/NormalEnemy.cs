@@ -9,8 +9,6 @@ public class NormalEnemy : Enemy
     public Image healthbar;
     float startHealth = 5f;
 
-    
-
     void Start()
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -19,13 +17,11 @@ public class NormalEnemy : Enemy
         speed = Random.Range(2f, 6f);
 
         agent.speed += speed;
-
-        
     }
     
     void Update()
     {     
-            if (health == 0f)
+            if (health <= 0f)
             {
                 Currency.currency = Currency.currency + reward;
                 Debug.Log(Currency.currency);
