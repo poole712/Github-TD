@@ -8,6 +8,7 @@ public class ExplosiveEnemy : Enemy
 {
     public Image healthbar;
     float startHealth = 5f;
+    public GameObject explosiveEffect;
 
     void Start()
     {
@@ -34,7 +35,8 @@ public class ExplosiveEnemy : Enemy
 
     void Explode()
     {
-
+        GameObject effectIns = (GameObject)Instantiate(explosiveEffect, transform.position, transform.rotation);
+        Destroy(effectIns, 2f);
     }
 
 }

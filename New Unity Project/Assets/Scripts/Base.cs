@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Base : MonoBehaviour
 {
-    public float hp = 5;
+    public float hp = 50;
     public GameObject explosvieEnemy;
 
     private void Update()
