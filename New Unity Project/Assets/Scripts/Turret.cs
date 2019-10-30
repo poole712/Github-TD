@@ -75,7 +75,6 @@ public class Turret : MonoBehaviour
         {
             Laser();
             Shoot2();
-            fireCountdown = 1f / fireRate / 0.5f;
         }
         else
         {
