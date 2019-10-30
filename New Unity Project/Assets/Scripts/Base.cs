@@ -5,11 +5,11 @@ using UnityEngine;
 public class Base : MonoBehaviour
 {
     public float hp = 5;
-
+    public GameObject explosvieEnemy;
 
     private void Update()
     {
-        if (hp == 0)
+        if (hp <= 0)
         {
             this.gameObject.SetActive(false);
         }
@@ -19,5 +19,10 @@ public class Base : MonoBehaviour
     {
         hp--;
         Destroy(other.gameObject);
+
+        if (explosvieEnemy.name == "Explosive Blob")
+        {
+            hp = hp - 3;
+        }
     }
 }

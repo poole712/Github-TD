@@ -13,8 +13,10 @@ public class WaveBlobSpawner : MonoBehaviour {
         public string name;
         public Transform NormalBlobEnemy;
         public Transform StoneBlobEnemy;
+        public Transform ExplosiveBlobEnemy;
         public int NormalBlobCount;
         public int StoneBlobCount;
+        public int ExplosiveBlobCount;
         public float rate;
     }
 
@@ -115,6 +117,12 @@ public class WaveBlobSpawner : MonoBehaviour {
             yield return new WaitForSeconds(1f / _wave.rate);
         }
 
+        for (int i = 0; i < _wave.ExplosiveBlobCount; i++)
+        {
+            SpawnEnemy(_wave.ExplosiveBlobEnemy);
+
+            yield return new WaitForSeconds(1f / _wave.rate);
+        }
 
         state = SpawnState.WAITING;
 

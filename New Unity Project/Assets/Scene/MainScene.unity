@@ -1234,32 +1234,41 @@ MonoBehaviour:
       type: 3}
     StoneBlobEnemy: {fileID: 1080308073452622620, guid: 437ad3088d5b42943918cea85b42a7a2,
       type: 3}
-    NormalBlobCount: 5
-    StoneBlobCount: 2
+    ExplosiveBlobEnemy: {fileID: 699977943637510463, guid: 8a3f9113324c4134ca081becfbf1899f,
+      type: 3}
+    NormalBlobCount: 0
+    StoneBlobCount: 0
+    ExplosiveBlobCount: 50
     rate: 1
   - name: 'Wave 2: Plenty'
     NormalBlobEnemy: {fileID: 699977943637510463, guid: 6c20cf126eb2e7a46bfdc8c0c6e77529,
       type: 3}
     StoneBlobEnemy: {fileID: 1080308073452622620, guid: 437ad3088d5b42943918cea85b42a7a2,
       type: 3}
+    ExplosiveBlobEnemy: {fileID: 0}
     NormalBlobCount: 10
     StoneBlobCount: 2
+    ExplosiveBlobCount: 0
     rate: 1.5
   - name: 'Wave 3: Explosives!'
     NormalBlobEnemy: {fileID: 699977943637510463, guid: 6c20cf126eb2e7a46bfdc8c0c6e77529,
       type: 3}
     StoneBlobEnemy: {fileID: 1080308073452622620, guid: 437ad3088d5b42943918cea85b42a7a2,
       type: 3}
+    ExplosiveBlobEnemy: {fileID: 0}
     NormalBlobCount: 20
     StoneBlobCount: 5
+    ExplosiveBlobCount: 0
     rate: 2
   - name: 'Wave 3: Explosives!'
     NormalBlobEnemy: {fileID: 699977943637510463, guid: 6c20cf126eb2e7a46bfdc8c0c6e77529,
       type: 3}
     StoneBlobEnemy: {fileID: 1080308073452622620, guid: 437ad3088d5b42943918cea85b42a7a2,
       type: 3}
+    ExplosiveBlobEnemy: {fileID: 0}
     NormalBlobCount: 35
     StoneBlobCount: 7
+    ExplosiveBlobCount: 0
     rate: 2
   timeBetweenWaves: 5
   waveCountDown: 0
@@ -1336,7 +1345,7 @@ GameObject:
   m_Name: Terrain_(200.0, 0.0, 100.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!154 &220029625
@@ -1652,13 +1661,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 319440351}
-  m_LocalRotation: {x: 0, y: 0.790155, z: 0, w: 0.6129071}
-  m_LocalPosition: {x: 83.63, y: 30.279612, z: -15.12}
-  m_LocalScale: {x: 4, y: 1, z: 10}
+  m_LocalRotation: {x: -0, y: 0.80230296, z: -0, w: 0.59691703}
+  m_LocalPosition: {x: 83.44, y: 30.279612, z: -15.880001}
+  m_LocalScale: {x: 3.65984, y: 1, z: 11.781}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 104.4, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 106.701004, z: 0}
 --- !u!65 &319440353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1807,7 +1816,7 @@ GameObject:
   m_Name: Terrain_(0.0, 0.0, 200.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!154 &354717344
@@ -2114,7 +2123,7 @@ GameObject:
   m_Name: Terrain_(100.0, 0.0, 100.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &378869589
@@ -2494,7 +2503,7 @@ GameObject:
   m_Name: Terrain_(-100.0, 0.0, 0.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &436063971
@@ -2796,7 +2805,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a920f8a45539c464da314cd1d18626bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 5
+  hp: 50
+  explosvieEnemy: {fileID: 699977943637510458, guid: 8a3f9113324c4134ca081becfbf1899f,
+    type: 3}
 --- !u!54 &491292305
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3455,13 +3466,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584010474}
-  m_LocalRotation: {x: 0, y: 0.6369532, z: 0, w: 0.7709025}
-  m_LocalPosition: {x: 22.05, y: 30.279612, z: -5.76}
-  m_LocalScale: {x: 4, y: 1, z: 20}
+  m_LocalRotation: {x: -0, y: 0.7143491, z: -0, w: 0.6997896}
+  m_LocalPosition: {x: 22.47, y: 30.279612, z: -5.77}
+  m_LocalScale: {x: 4, y: 1, z: 20.5}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 79.13, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 91.18001, z: 0}
 --- !u!65 &584010476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3947,7 +3958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690420333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.527542, y: -30.609612, z: 46.458748}
+  m_LocalPosition: {x: -4.527542, y: -30.4, z: 46.458748}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1203496248}
@@ -4067,13 +4078,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707553674}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 66.8, y: 30.279612, z: -34.78}
-  m_LocalScale: {x: 4, y: 1, z: 45}
+  m_LocalRotation: {x: -0, y: 0.7137485, z: -0, w: 0.7004021}
+  m_LocalPosition: {x: 64.31, y: 30.279612, z: -34.99}
+  m_LocalScale: {x: 3.455, y: 1, z: 45}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 91.081, z: 0}
 --- !u!65 &707553676
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4147,7 +4158,7 @@ GameObject:
   m_Name: Terrain_(0.0, 0.0, -100.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &724076078
@@ -4302,7 +4313,7 @@ GameObject:
   m_Name: Terrain_(0.0, 0.0, 100.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &751554768
@@ -4682,7 +4693,7 @@ GameObject:
   m_Name: Terrain_(100.0, 0.0, -100.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &802325147
@@ -4837,7 +4848,7 @@ GameObject:
   m_Name: Terrain_(100.0, 0.0, 0.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &829110761
@@ -5300,7 +5311,7 @@ GameObject:
   m_Name: Terrain_(200.0, 0.0, 0.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!154 &901575891
@@ -5546,7 +5557,7 @@ GameObject:
   m_Name: Terrain_(-100.0, 0.0, -100.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &972238852
@@ -5836,7 +5847,7 @@ GameObject:
   m_Name: Terrain_(100.0, 0.0, 200.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!154 &1013675228
@@ -6510,7 +6521,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 4294967263
   m_IsActive: 1
 --- !u!4 &1203496248
 Transform:
@@ -6611,8 +6622,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1203881186}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.21, y: 30.279612, z: -27.56}
-  m_LocalScale: {x: 4, y: 1, z: 20}
+  m_LocalPosition: {x: 42.21, y: 30.279612, z: -27.51}
+  m_LocalScale: {x: 3.85012, y: 1, z: 17.75894}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 8
@@ -7215,7 +7226,7 @@ GameObject:
   m_Name: Terrain_(-100.0, 0.0, 100.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1316177245
@@ -7607,8 +7618,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409843919}
   m_LocalRotation: {x: 0, y: 0.026176924, z: 0, w: 0.99965733}
-  m_LocalPosition: {x: 58.5, y: 30.279612, z: -6.8}
-  m_LocalScale: {x: 4, y: 1, z: 25}
+  m_LocalPosition: {x: 58.27, y: 30.279612, z: -5.53}
+  m_LocalScale: {x: 3.45048, y: 1, z: 25}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 6
@@ -7997,13 +8008,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1467634449}
-  m_LocalRotation: {x: 0, y: 0.75327647, z: 0, w: 0.657704}
-  m_LocalPosition: {x: 54.98, y: 30.279612, z: 6.72}
-  m_LocalScale: {x: 4, y: 1, z: 15}
+  m_LocalRotation: {x: -0, y: 0.7216708, z: -0, w: 0.6922365}
+  m_LocalPosition: {x: 53.46, y: 30.279612, z: 7.5}
+  m_LocalScale: {x: 3.0258, y: 1, z: 14.201093}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 97.75, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 92.385, z: 0}
 --- !u!65 &1467634451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8538,8 +8549,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1549272708}
   m_LocalRotation: {x: 0, y: 0.64559096, z: 0, w: 0.76368344}
-  m_LocalPosition: {x: 47.87, y: 30.279612, z: -19.24}
-  m_LocalScale: {x: 4, y: 1, z: 20}
+  m_LocalPosition: {x: 49.81, y: 30.279612, z: -18.48}
+  m_LocalScale: {x: 2.83432, y: 1, z: 18.92761}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 7
@@ -8854,8 +8865,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654569742}
   m_LocalRotation: {x: 0, y: 0.0209424, z: 0, w: 0.9997807}
-  m_LocalPosition: {x: 80.63, y: 30.279612, z: 8.6}
-  m_LocalScale: {x: 4, y: 1, z: 50}
+  m_LocalPosition: {x: 80.64, y: 30.279612, z: 8.84}
+  m_LocalScale: {x: 4.2, y: 1, z: 50}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 11
@@ -9394,8 +9405,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1734956465}
   m_LocalRotation: {x: 0, y: 0.0209424, z: 0, w: 0.9997807}
-  m_LocalPosition: {x: 48.45, y: 30.279612, z: 22.98}
-  m_LocalScale: {x: 4, y: 1, z: 35}
+  m_LocalPosition: {x: 48.51, y: 30.279612, z: 24.34}
+  m_LocalScale: {x: 4, y: 1, z: 36.337}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 4
@@ -10057,13 +10068,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874934620}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 87.25, y: 30.279612, z: -24.23}
-  m_LocalScale: {x: 4, y: 1, z: 20}
+  m_LocalRotation: {x: -0, y: 0.01733684, z: -0, w: 0.99984974}
+  m_LocalPosition: {x: 87.22, y: 30.279612, z: -26.41}
+  m_LocalScale: {x: 4, y: 1, z: 21.333763}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1.9870001, z: 0}
 --- !u!65 &1874934622
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11084,13 +11095,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040095707}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 42.56, y: 30.279612, z: 41.48}
-  m_LocalScale: {x: 4, y: 1, z: 20}
+  m_LocalRotation: {x: -0, y: 0.71868706, z: -0, w: 0.6953337}
+  m_LocalPosition: {x: 42.21, y: 30.279612, z: 41.69}
+  m_LocalScale: {x: 4, y: 1, z: 18.0486}
   m_Children: []
   m_Father: {fileID: 690420334}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 91.892006, z: 0}
 --- !u!65 &2040095709
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11539,7 +11550,7 @@ GameObject:
   m_Name: Terrain_(200.0, 0.0, 200.0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!154 &2114499466
