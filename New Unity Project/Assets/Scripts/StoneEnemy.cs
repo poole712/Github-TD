@@ -8,6 +8,7 @@ public class StoneEnemy : Enemy
 {
     public Image healthbar;
     float startHealth = 20f;
+    public Transform cameraTransform;
 
     void Start()
     {
@@ -29,5 +30,6 @@ public class StoneEnemy : Enemy
             }
 
         healthbar.fillAmount = health / startHealth;
+        healthbar.transform.LookAt(cameraTransform);
     }
 }

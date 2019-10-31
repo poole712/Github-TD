@@ -187,6 +187,8 @@ MonoBehaviour:
   homeBase: {fileID: 3034661165823471078, guid: 520a6159074a3d34a9289127c598bba0,
     type: 3}
   healthbar: {fileID: 3032604777541650137}
+  cameraTransform: {fileID: 8028472456917030141, guid: c291db8691fd5f94db5ffe4dd065317a,
+    type: 3}
 --- !u!1 &8148765740980904264
 GameObject:
   m_ObjectHideFlags: 0

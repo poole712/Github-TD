@@ -24,7 +24,7 @@ public class Base : MonoBehaviour
 
         if (explosvieEnemy.name == "Explosive Blob")
         {
-            hp = hp - 3;
+            hp = hp - 4;
         }
     }
 

@@ -263,6 +263,8 @@ MonoBehaviour:
   healthbar: {fileID: 301232047}
   explosiveEffect: {fileID: 8711721129423003329, guid: ea20b32ee7014bd4c904b633fdf5a128,
     type: 3}
+  cameraTransform: {fileID: 8028472456917030141, guid: c291db8691fd5f94db5ffe4dd065317a,
+    type: 3}
 --- !u!95 &699977943614080685
 Animator:
   serializedVersion: 3

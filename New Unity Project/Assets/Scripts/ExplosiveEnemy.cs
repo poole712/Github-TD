@@ -9,6 +9,7 @@ public class ExplosiveEnemy : Enemy
     public Image healthbar;
     float startHealth = 5f;
     public GameObject explosiveEffect;
+    public Transform cameraTransform;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class ExplosiveEnemy : Enemy
             }
 
         healthbar.fillAmount = health / startHealth;
+        healthbar.transform.LookAt(cameraTransform);
     }
 
     void Explode()
