@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  reward: 0
+  reward: 15
   speed: 50
   homeBase: {fileID: 3034661165823471078, guid: 520a6159074a3d34a9289127c598bba0,
     type: 3}

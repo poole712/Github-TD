@@ -26,7 +26,7 @@ public class ExplosiveEnemy : Enemy
             {
                 Currency.currency = Currency.currency + reward;
                 Debug.Log(Currency.currency);
-            Explode();
+                Explode();
                 Destroy(this.gameObject);
             }
 

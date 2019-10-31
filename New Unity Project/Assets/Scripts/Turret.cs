@@ -24,10 +24,13 @@ public class Turret : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform firePoint;
 
+  
+
 
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+
     }
 
     void UpdateTarget()
@@ -59,6 +62,9 @@ public class Turret : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+    
+
         if (target == null)
         {
             if(useLaser == true)
