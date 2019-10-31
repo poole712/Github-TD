@@ -5,19 +5,11 @@ using UnityEngine;
 public class Range : MonoBehaviour
 {
     public GameObject rangeCircle;
+    public float range;
 
-    // Start is called before the first frame update
     void Start()
     {
-        rangeCircle.SetActive(false);
+        rangeCircle.transform.localScale = new Vector3(range, 0.1f, range);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            rangeCircle.SetActive(false);
-        }
-    }
+    
 }

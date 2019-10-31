@@ -76,5 +76,14 @@ public class Shop : MonoBehaviour
                 laserTurret.transform.position = hit.point;
             }
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            standardTurret.SetActive(false);
+            laserTurret.SetActive(false);
+            turret1.SetActive(false);
+            turret2.SetActive(false);
+            turretValue = 0;
+        }
     }
 }
