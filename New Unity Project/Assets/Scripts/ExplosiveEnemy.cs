@@ -16,7 +16,7 @@ public class ExplosiveEnemy : Enemy
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = homeBase.position;
 
-        speed = Random.Range(50f, 50f);
+        speed = Random.Range(70f, 70f);
 
         agent.speed += speed;
     }
